@@ -1,11 +1,15 @@
 import { useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
+import { SelectedPage } from "@/shared/types";
 import Logo from "@/assets/Logo.png";
 import Link from "./Link";
 
-type Props = { selectedPage: string; setSelectedPage: (value: string) => void };
+type Props = {
+  selectedPage: SelectedPage;
+  setSelectedPage: (value: SelectedPage) => void;
+};
 
-const Navbar = (selectedPage, setSelectedPage: Props) => {
+const Navbar = ({ selectedPage, setSelectedPage }: Props) => {
   const flexBetween = "flex items-center justify-between";
   return (
     <nav>
